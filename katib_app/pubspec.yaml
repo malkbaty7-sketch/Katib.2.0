@@ -1,0 +1,81 @@
+name: katib_app
+description: "Katib App - Hybrid platform for reading and writing Arabic books"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State Management
+  flutter_bloc: ^8.1.6
+  provider: ^6.1.2
+  equatable: ^2.0.5
+
+  # Document handling, PDF and File selection
+  file_picker: ^8.1.7
+  pdfx: ^2.6.0
+  pdf: ^3.10.8
+  printing: ^5.13.1
+  archive: ^3.6.1
+  docx_template: ^0.4.0
+  share_plus: ^9.0.0
+  path_provider: ^2.1.4
+
+  # AI Engine
+  google_generative_ai: ^0.4.6
+
+  # UI Design, Fonts & Responsiveness
+  google_fonts: ^6.2.1
+  flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.0.10+1
+  intl: ^0.20.3
+
+  # Local Storage & DB
+  shared_preferences: ^2.3.2
+  uuid: ^4.5.1
+  sqflite: ^2.3.3+1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Firebase & Cloud Sync
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.4
+  connectivity_plus: ^6.1.0
+
+  # Audio & TTS
+  flutter_tts: ^4.1.0
+  just_audio: ^0.9.38
+
+  # Rich Text Editor
+  flutter_quill: ^9.4.0
+
+  # Native Splash
+  flutter_native_splash: ^2.4.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/covers/
+    - assets/sample_books/
+
+  # الخطوط: ملفات Cairo و Tajawal (.ttf) غير موجودة في المشروع، لذا يستخدم التطبيق خط النظام العربي مؤقتاً.
+  # لتفعيلها: ضع الملفات في assets/fonts ثم أزل التعليق عن هذا القسم (وأكمل بقية الأوزان):
+  # fonts:
+  #   - family: Cairo
+  #     fonts:
+  #       - asset: assets/fonts/Cairo-Regular.ttf
